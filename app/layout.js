@@ -22,7 +22,20 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+
+        <nav className="p-6 border-b border-gray-200 flex justify-between items-center mb-6">
+          <div className="font-bold text-lg">My Blog</div>
+          <div className="space-x-4">
+            <a href="/" className="text-gray-600 hover:text-black">Home</a>
+            <a href="/about" className="text-gray-600 hover:text-black">About</a>
+          </div>
+        </nav>
+
         {children}
+
+        <footer className="p-6 text-center text-gray-500 text-sm mt-10 border-t border-gray-200">
+          &copy; {new Date().getFullYear()} My Blog. Built with Next.js and Tailwind.
+        </footer>
       </body>
     </html>
   );

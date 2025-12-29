@@ -58,8 +58,8 @@ export default async function Home() {
       {/* ... your existing <ul> grid ... */}
       <ul className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {posts.map((post) => (
-          <li key={post.id} className="mb-4">
-            {/* 3. We use the Link component for instant navigation */}
+          <li className="bg-white border border-gray-200 p-6 rounded-lg shadow-sm hover:shadow-md hover:-translate-y-1 transition-all" key={post.id}>
+          {/* 3. We use the Link component for instant navigation */}
             <Link 
               href={`/blog/${post.id}`} 
               className="text-blue-500 hover:underline text-xl"
